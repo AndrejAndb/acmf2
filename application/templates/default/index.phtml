@@ -1,0 +1,19 @@
+<?php echo $this->broker('doctype'); ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>My Site</title>
+    <?php echo $this->broker('headLink') ?>
+    <?php echo $this->broker('headStyle') ?>
+    <?php echo $this->broker('headScript') ?>
+</head>
+<body>
+<?php
+    echo $this->broker('layout')->getLayout()->admin_panel;
+    // извлечение содержимого ключа 'content'
+    // с использованием помощника макета:
+//Zend_Debug::dump($this->layout());
+    echo $this->broker('layout')->getLayout()->content;
+?>
+</body>
+</html>
